@@ -23,7 +23,7 @@ body {
 .sidebar__heading {
   margin-top: 90px;
   float: right;
-  background-color: rgb(240, 38, 24);
+  background-color: black;
   width: 50%;
   height: 150px;
 }
