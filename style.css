@@ -20,7 +20,13 @@ body {
   width: 25%;
   background-color: #f8f2f2;
 }
-
+.sidebar__heading {
+  margin-top: 90px;
+  float: right;
+  background-color: rgb(240, 38, 24);
+  width: 50%;
+  height: 150px;
+}
 #app .main {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
