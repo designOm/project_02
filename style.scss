@@ -16,10 +16,12 @@ body{
         min-height: 100vh;
     }
     .sidebar{
+        display: block;
         width: 15%;
         background-color: $sidebarColor;
     }
     .sidebar__heading{
+        position: relative;
         height: 170px;
         background-color: $primaryColor;
         color: $fontColor1;

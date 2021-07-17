@@ -13,10 +13,12 @@ body {
   min-height: 100vh;
 }
 #app .sidebar {
+  display: block;
   width: 15%;
   background-color: #fcf9f9;
 }
 #app .sidebar__heading {
+  position: relative;
   height: 170px;
   background-color: #f14e25;
   color: white;
