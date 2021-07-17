@@ -13,16 +13,22 @@ body {
   min-height: 100vh;
 }
 #app .sidebar {
-  width: 14%;
+  width: 15%;
   background-color: #fcf9f9;
 }
 #app .sidebar__heading {
-  height: 160px;
-  background-color: #f03b3b;
+  height: 170px;
+  background-color: #f14e25;
   color: white;
+  font-family: Arial;
 }
 #app .sidebar__heading h1 {
-  margin: 0px 0px 0px 10px;
+  padding: 20px 10px 10px 10px;
+}
+#app .sidebar__heading hr {
+  width: 80%;
+  display: block;
+  margin: 20px 10px 20px 10px;
 }
 #app .main {
   flex-basis: 0;
