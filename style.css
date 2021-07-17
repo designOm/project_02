@@ -19,7 +19,6 @@ body {
 #app .sidebar__heading {
   width: 50%;
   height: 150px;
-  float: right;
   margin-top: 90px;
   background-color: #f03b3b;
   color: white;

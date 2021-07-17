@@ -16,14 +16,11 @@ body{
         min-height: 100vh;
     }
     .sidebar{
-        width: 25%;
-        background-color: $sidebarColor;
+        width: 20%;
+        background-color: $primaryColor;
     }
     .sidebar__heading{
-        width: 50%;
         height: 150px;
-        float: right;
-        margin-top: 90px;
         background-color: $primaryColor;
         color: $fontColor1;
     }
