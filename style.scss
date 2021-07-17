@@ -35,6 +35,21 @@ body{
         display: block;
         margin: 20px 10px 20px 10px;
     }
+     ul{
+        width: 100%;
+        list-style-type: none;
+    }
+    li a{
+        display: block;
+        padding: 10px 20px;
+        color: $darkTextColor;
+        text-decoration: none;
+    }
+    li a:hover{
+        background-color: $bgGray;
+        font-weight: bolder;
+        
+    }
     
     .main{
         flex-basis: 0;
