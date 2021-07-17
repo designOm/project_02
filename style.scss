@@ -49,7 +49,7 @@ body{
     li a:hover{
         background-color: $bgGray;
         font-weight: bolder;
-        
+        border-left: 3px solid $primaryColor;
     }
     
     .main{
