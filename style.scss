@@ -18,7 +18,8 @@ body{
     .sidebar{
         position: relative;
         width: 15%;
-        background-color: $sidebarColor;
+        background-color: $secondaryColor;
+        border-right: 2px solid $bgGray;
     }
     .sidebar__heading{
         position: relative;
@@ -56,5 +57,10 @@ body{
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;
+    }
+    .top{
+        height: 350px;
+        width: 100%;
+        background-color: $secondaryColor;
     }
 }

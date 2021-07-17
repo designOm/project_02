@@ -16,6 +16,7 @@ body {
   position: relative;
   width: 15%;
   background-color: #fcf9f9;
+  border-right: 2px solid #e1e1e1;
 }
 #app .sidebar__heading {
   position: relative;
@@ -52,4 +53,9 @@ body {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
+}
+#app .top {
+  height: 350px;
+  width: 100%;
+  background-color: #fcf9f9;
 }/*# sourceMappingURL=style.css.map */
