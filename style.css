@@ -13,15 +13,16 @@ body {
   min-height: 100vh;
 }
 #app .sidebar {
-  width: 25%;
+  width: 14%;
   background-color: #fcf9f9;
 }
 #app .sidebar__heading {
-  width: 50%;
-  height: 150px;
-  margin-top: 90px;
+  height: 160px;
   background-color: #f03b3b;
   color: white;
+}
+#app .sidebar__heading h1 {
+  margin: 0px 0px 0px 10px;
 }
 #app .main {
   flex-basis: 0;
