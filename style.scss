@@ -16,7 +16,7 @@ body{
         min-height: 100vh;
     }
     .sidebar{
-        display: block;
+        position: relative;
         width: 15%;
         background-color: $sidebarColor;
     }
@@ -28,6 +28,7 @@ body{
         font-family: Arial;
     }
     .sidebar__heading h1{
+        position: relative;
         padding: 20px 10px 10px 10px;
     }
     .sidebar__heading hr{
