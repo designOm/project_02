@@ -1,4 +1,4 @@
-@import './styles/color';
+@import './style/color';
 
 *{
     margin: 0;
@@ -17,11 +17,14 @@ body{
     }
     .sidebar{
         width: 200px;
-        // background-color: $primaryColor;
+        height: 200px;
+        margin: 80px 80px;
+        background-color: $primaryColor;
     }
     .main{
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;
     }
+   
 }
