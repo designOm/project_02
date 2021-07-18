@@ -62,7 +62,7 @@ body {
 
 #app .header {
   height: 350px;
-  width: 100%;
+  width: 600%;
   background-color: #f0f0f0;
   position: relative;
 }
@@ -72,6 +72,41 @@ body {
   width: 20%;
   height: 100%;
   border-right: 2px solid #b3a9a9;
+}
+
+#app .right_heading h1 {
+  font-family: "Trirong", serif;
+  color: #2c2c2c;
+  font-size: 40px;
+  font-weight: lighter;
+  padding-bottom: 8px;
+}
+
+#app .right_heading hr {
+  width: 25%;
+  display: block;
+  border: 1px solid #f54e4e;
+}
+
+#app .right_heading p {
+  font-family: "Trirong", serif;
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+#app .container1 {
+  width: 400px;
+  height: 150px;
+  float: left;
+  display: block;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-top: 50px;
+}
+
+#app .column1 {
+  width: 300px;
+  height: 300px;
 }
 
 #app .main {
