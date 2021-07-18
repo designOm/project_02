@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
 }
 #app .sidebar {
+  display: block;
   position: relative;
   width: 15%;
   background-color: #fcf9f9;
@@ -58,4 +59,25 @@ body {
   height: 350px;
   width: 100%;
   background-color: #fcf9f9;
+}
+#app .left {
+  float: left;
+  width: 20%;
+  height: 100%;
+  border-right: 3px solid #e1e1e1;
+}
+#app .right {
+  float: right;
+  width: 80%;
+  height: 100%;
+}
+#app .container1 {
+  float: left;
+  width: 390px;
+  height: 200px;
+  padding: 10px 0px 20px 15px;
+  margin-top: 100px;
+}
+#app .right h1 {
+  font-size: 40px;
 }/*# sourceMappingURL=style.css.map */
