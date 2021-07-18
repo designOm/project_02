@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-  background-color: #e1e1e1;
+  background-color: #b3a9a9;
 }
 
 #app.home {
@@ -17,10 +18,60 @@ body {
 }
 
 #app .sidebar {
-  width: 200px;
+  position: relative;
+  width: 15%;
+  background-color: #f0f0f0;
+  border-right: 2px solid #b3a9a9;
+}
+
+#app .sidebar__heading {
   height: 200px;
-  margin: 80px 80px;
   background-color: #f54e4e;
+  color: white;
+}
+
+#app .sidebar__heading h1 {
+  padding: 50px 15px 20px 15px;
+  font-family: Arial;
+  font-size: 30px;
+}
+
+#app .sidebar__heading hr {
+  width: 80%;
+  display: block;
+  margin: 0px 20px;
+}
+
+#app .sidebar__menu ul {
+  width: 100%;
+  list-style-type: none;
+}
+
+#app li a {
+  display: block;
+  padding: 25px 0px 20px;
+  color: black;
+  text-decoration: none;
+}
+
+#app li a:hover {
+  background-color: #b3a9a9;
+  border-left: 2px solid #f54e4e;
+  font-weight: bolder;
+}
+
+#app .header {
+  height: 350px;
+  width: 100%;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+#app .left_heading {
+  float: left;
+  width: 20%;
+  height: 100%;
+  border-right: 2px solid #b3a9a9;
 }
 
 #app .main {
@@ -30,5 +81,6 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   max-width: 100%;
+  background-color: #b3a9a9;
 }
 /*# sourceMappingURL=style.css.map */
