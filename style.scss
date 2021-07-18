@@ -17,6 +17,10 @@ body{
     }
     .sidebar{
         width: 200px;
+        &__heading{
+            background-color: $primaryColor;
+            min-height: 100px;
+        }
         // background-color: $primaryColor;
     }
     .main{

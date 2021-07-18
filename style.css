@@ -20,6 +20,11 @@ body {
   width: 200px;
 }
 
+#app .sidebar__heading {
+  background-color: #f54e4e;
+  min-height: 100px;
+}
+
 #app .main {
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
