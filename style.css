@@ -19,12 +19,13 @@ body {
 
 #app .sidebar {
   position: relative;
-  width: 15%;
+  width: 100%;
   background-color: #f0f0f0;
   border-right: 2px solid #b3a9a9;
 }
 
 #app .sidebar__heading {
+  display: block;
   height: 200px;
   background-color: #f54e4e;
   color: white;
@@ -33,7 +34,7 @@ body {
 #app .sidebar__heading h1 {
   padding: 50px 15px 20px 15px;
   font-family: Arial;
-  font-size: 30px;
+  font: size 25px;
 }
 
 #app .sidebar__heading hr {
@@ -49,19 +50,19 @@ body {
 
 #app li a {
   display: block;
-  padding: 25px 0px 20px;
+  padding: 20px 5px 10px 10px;
   color: black;
   text-decoration: none;
 }
 
 #app li a:hover {
   background-color: #b3a9a9;
-  border-left: 2px solid #f54e4e;
+  border-left: 3px solid #f54e4e;
   font-weight: bolder;
 }
 
 #app .header {
-  height: 350px;
+  height: 300px;
   width: 600%;
   background-color: #f0f0f0;
   position: relative;
@@ -71,7 +72,6 @@ body {
   float: left;
   width: 20%;
   height: 100%;
-  border-right: 2px solid #b3a9a9;
 }
 
 #app .right_heading h1 {
@@ -90,7 +90,7 @@ body {
 
 #app .right_heading p {
   font-family: "Trirong", serif;
-  font-size: 20px;
+  font-size: 15px;
   padding-top: 20px;
 }
 
@@ -102,6 +102,7 @@ body {
   padding-left: 20px;
   padding-bottom: 10px;
   margin-top: 50px;
+  border-left: 1px solid #b3a9a9;
 }
 
 #app .column1 {
