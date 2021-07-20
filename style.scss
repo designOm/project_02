@@ -16,20 +16,11 @@ body{
         min-height: 100vh;
     }
     .sidebar{
-<<<<<<< HEAD
-        width: 200px;
-        &__heading{
-            background-color: $primaryColor;
-            min-height: 100px;
-        }
-        // background-color: $primaryColor;
-=======
         display: block;
         position: relative;
         width: 15%;
         background-color: $secondaryColor;
         border-right: 2px solid $bgGray;
->>>>>>> f5564d792ea18a34a3ab9a7b4c6898991e0e2f34
     }
     .sidebar__heading{
         position: relative;

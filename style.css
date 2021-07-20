@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -9,9 +10,12 @@ body {
 }
 
 #app.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
 }
+
 #app .sidebar {
   display: block;
   position: relative;
@@ -19,6 +23,7 @@ body {
   background-color: #fcf9f9;
   border-right: 2px solid #e1e1e1;
 }
+
 #app .sidebar__heading {
   position: relative;
   height: 170px;
@@ -26,61 +31,65 @@ body {
   color: white;
   font-family: Arial;
 }
+
 #app .sidebar__heading h1 {
   position: relative;
   padding: 20px 10px 10px 10px;
 }
+
 #app .sidebar__heading hr {
   width: 80%;
   display: block;
   margin: 20px 10px 20px 10px;
 }
+
 #app ul {
   width: 100%;
   list-style-type: none;
 }
+
 #app li a {
   display: block;
   padding: 10px 20px;
   color: #2c2c2c;
   text-decoration: none;
 }
+
 #app li a:hover {
   background-color: #e1e1e1;
   font-weight: bolder;
   border-left: 3px solid #f14e25;
 }
-<<<<<<< HEAD
 
-#app .sidebar__heading {
-  background-color: #f54e4e;
-  min-height: 100px;
-}
-
-=======
->>>>>>> f5564d792ea18a34a3ab9a7b4c6898991e0e2f34
 #app .main {
-  flex-basis: 0;
-  flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   max-width: 100%;
 }
+
 #app .top {
   display: block;
   height: 350px;
   width: 100%;
   background-color: #fcf9f9;
 }
+
 #app .left {
   float: left;
   width: 20%;
   height: 100%;
 }
+
 #app .right {
   display: block;
   float: right;
   width: 80%;
   height: 100%;
 }
+
 #app .container1 {
   float: left;
   width: 390px;
@@ -89,23 +98,28 @@ body {
   margin-top: 100px;
   border-left: 2px solid #e1e1e1;
 }
+
 #app .right h1 {
   font-size: 40px;
   padding-bottom: 13px;
 }
+
 #app .container1 hr {
   width: 90px;
   border: 1px solid #f14e25;
 }
+
 #app .right p {
   padding-top: 12px;
 }
+
 #app .remaining_area {
   display: block;
   width: 100%;
   height: 500px;
   background-color: #e1e1e1;
 }
+
 #app .container2 {
   float: left;
   display: block;
@@ -113,6 +127,7 @@ body {
   height: 100%;
   background-color: red;
 }
+
 #app .container3 {
   float: right;
   display: block;
@@ -120,14 +135,17 @@ body {
   height: 100%;
   background-color: #e1e1e1;
 }
+
 #app .subcontainer3 {
   height: 150px;
   margin: 200px 40px 100px 40px;
   background-color: #fcf9f9;
 }
+
 #app .subcontainer1 .subcontainer2 {
   width: 50px;
   height: 50px;
   background-color: #fcf9f9;
   border: 2px solid green;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
