@@ -1,138 +1,188 @@
-@import './styles/color';
+@import "./styles/color";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color:  $bgGray;
+body {
+  background-color: $bgGray;
 }
 
-#app{
-    &.home{
-        display: flex;
-        min-height: 100vh;
-    }
-    .sidebar{
-        display: block;
-        position: relative;
-        width: 15%;
-        background-color: $secondaryColor;
-        border-right: 2px solid $bgGray;
-    }
-    .sidebar__heading{
-        position: relative;
-        height: 170px;
-        background-color: $primaryColor;
-        color: $fontColor1;
-        font-family: Arial;
-    }
-    .sidebar__heading h1{
+#app {
+  &.home {
+    display: flex;
+    min-height: 100vh;
+  }
+  .sidebar {
+    display: block;
+    position: relative;
+    width: 15%;
+    background-color: $secondaryColor;
+    border-right: 2px solid $bgGray;
+    &__heading {
+      position: relative;
+      height: 170px;
+      background-color: $primaryColor;
+      color: $fontColor1;
+      font-family: Arial;
+      h1 {
         position: relative;
         padding: 20px 10px 10px 10px;
-    }
-    .sidebar__heading hr{
+      }
+      hr {
         width: 80%;
         display: block;
         margin: 20px 10px 20px 10px;
+      }
     }
-     ul{
+    &__menu {
+      &__navigation {
         width: 100%;
         list-style-type: none;
-    }
-    li a{
+      }
+      li a {
         display: block;
         padding: 10px 20px;
         color: $darkTextColor;
         text-decoration: none;
-    }
-    li a:hover{
+      }
+      li a:hover {
         background-color: $bgGray;
         font-weight: bolder;
         border-left: 3px solid $primaryColor;
+      }
     }
-    
-    .main{
-        flex-basis: 0;
-        flex-grow: 1;
-        max-width: 100%;
-    }
-    .top{
-        display: block;
-        height: 350px;
-        width: 100%;
-        background-color: $secondaryColor;
-    }
-    .left{
-        float: left;
+  }
+
+  .main {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+
+    .top {
+      display: flex;
+      height: 350px;
+      width: 100%;
+      background-color: $secondaryColor;
+      .left {
+        // float: left;
         width: 20%;
-        height: 100%;
-    }
-    .right {
+        // height: 100%;
+      }
+      .right {
         display: block;
-        float: right;
+        // float: right;
         width: 80%;
-        height: 100%;
+        // height: 100%;
+      }
+    }
+    /**.container1 {
+      float: left;
+      width: 390px;
+      height: 200px;
+      padding: 10px 0px 20px 15px;
+      margin-top: 100px;
+      border-left: 2px solid $bgGray;
+    }
+    .right h1 {
+      font-size: 40px;
+      padding-bottom: 13px;
+    }
+    .container1 hr {
+      width: 90px;
+      border: 1px solid $primaryColor;
+    }
 
-    }
-    .container1 {
-        float: left;
-        width: 390px;
-        height: 200px;
-        padding: 10px 0px 20px 15px;
-        margin-top: 100px;
-        border-left: 2px solid $bgGray;
-    }
-    .right h1{
-        font-size: 40px;
-        padding-bottom: 13px;
-    }
-    .container1 hr{
-        width: 90px;
-        border: 1px solid $primaryColor;
+    .right p {
+      padding-top: 12px;
     }
 
-    .right p{
-        padding-top: 12px;
-    }
-    
     .remaining_area {
-        display: block;
-        width: 100%;
-        height: 500px;
-        background-color: $bgGray;
+      display: block;
+      width: 100%;
+      height: 500px;
+      background-color: $bgGray;
     }
-    .container2 .container3{
-        
+    .container2 .container3 {
+    }
+    .container2 {
+      float: left;
+      display: block;
+      width: 50%;
+      height: 100%;
+      background-color: red;
+    }
+    .container3 {
+      float: right;
+      display: block;
+      width: 50%;
+      height: 100%;
+      background-color: $bgGray;
+    }
+    .subcontainer3 {
+      height: 150px;
+      //padding: 50px 0px 50px 0px;
+      margin: 200px 40px 100px 40px;
+      background-color: $secondaryColor;
+    }
+    .subcontainer1 .subcontainer2 {
+      width: 50px;
+      height: 50px;
+      background-color: $secondaryColor;
+      border: 2px solid green;
+    }**/
 
-    }
-    .container2{
-        float: left;
-        display:block;
-        width: 50%;
-        height: 100%;
-        background-color: red;
-    }
-    .container3{
-        float:right;
-        display:block;
-        width: 50%;
-        height: 100%;
-        background-color:$bgGray;
-    }
-    .subcontainer3{
 
-        height: 150px;
-        //padding: 50px 0px 50px 0px;
-        margin: 200px 40px 100px 40px;
-        background-color:$secondaryColor;
+    //Main Area remaining part will go from here
+    .posts{
+      display: flex;
+      flex-flow: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 30px;
+        width: 2px;
+        background-color: $borderGray;
+        height: calc(100% - 30px);
+        border-radius: 3px;
+        left: calc(50% - 1px);
+      }
+      &__item{
+        background-color: $lightBackground;
+        width: calc(50%  - 60px);
+        min-height: 250px;
+        border-radius: 3px;
+        position: relative;
+        &::after{
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 2px;
+          background-color: $borderGray;
+        }
+        &:nth-child(even){
+          margin-left: auto;
+          margin-right: 30px;
+          margin-top: -70px;
+          &::after{
+            left: -30px;
+            top: 30px;
+          }
+        }
+        &:nth-child(odd){
+          margin-right: auto;
+          margin-left: 30px;
+          &::after{
+            right: -30px;
+            top: 30px;
+          }
+        }
+      }
     }
-    .subcontainer1 .subcontainer2{
-        width: 50px;
-        height: 50px;
-        background-color:$secondaryColor;
-        border:2px solid green;
-    }
+  }
 }
