@@ -35,17 +35,17 @@ body {
   display: block;
   margin: 20px 10px 20px 10px;
 }
-#app ul {
+#app .sidebar__menu__navigation {
   width: 100%;
   list-style-type: none;
 }
-#app li a {
+#app .sidebar__menu li a {
   display: block;
   padding: 10px 20px;
   color: #2c2c2c;
   text-decoration: none;
 }
-#app li a:hover {
+#app .sidebar__menu li a:hover {
   background-color: #e1e1e1;
   font-weight: bolder;
   border-left: 3px solid #f14e25;
@@ -55,24 +55,24 @@ body {
   flex-grow: 1;
   max-width: 100%;
 }
-#app .top {
+#app .main .top {
   display: block;
   height: 350px;
   width: 100%;
   background-color: #fcf9f9;
 }
-#app .left {
+#app .main .top .left {
   float: left;
   width: 20%;
   height: 100%;
 }
-#app .right {
+#app .main .top .right {
   display: block;
   float: right;
   width: 80%;
   height: 100%;
 }
-#app .container1 {
+#app .main .top .right .container1 {
   float: left;
   width: 390px;
   height: 200px;
@@ -80,45 +80,146 @@ body {
   margin-top: 100px;
   border-left: 2px solid #e1e1e1;
 }
-#app .right h1 {
+#app .main .top .right .container1 .h1 {
   font-size: 40px;
-  padding-bottom: 13px;
+  padding: 30px;
 }
-#app .container1 hr {
+#app .main .top .right .container1 hr {
   width: 90px;
   border: 1px solid #f14e25;
 }
-#app .right p {
-  padding-top: 12px;
+#app .main .top .right .container1 .p {
+  margin-top: 12px;
 }
-#app .remaining_area {
+#app .main .posts {
+  display: flex;
+  flex-flow: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+#app .main .posts::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 2px;
+  background-color: #a8a8a8;
+  height: calc(100% - 30px);
+  border-radius: 3px;
+  left: calc(50% - 1px);
+}
+#app .main .posts__item {
+  background-color: #ffffff;
+  width: calc(50% - 60px);
+  min-height: 250px;
+  border-radius: 3px;
+  position: relative;
+}
+#app .main .posts__item .containt_area {
   display: block;
-  width: 100%;
-  height: 500px;
-  background-color: #e1e1e1;
-}
-#app .container2 {
-  float: left;
-  display: block;
-  width: 50%;
-  height: 100%;
-  background-color: red;
-}
-#app .container3 {
-  float: right;
-  display: block;
-  width: 50%;
-  height: 100%;
-  background-color: #e1e1e1;
-}
-#app .subcontainer3 {
   height: 150px;
-  margin: 200px 40px 100px 40px;
-  background-color: #fcf9f9;
+  width: 80%;
+  margin-top: 65px;
+  padding-left: 45px;
+  font-family: arial;
+  border-left: 2px solid #f14e25;
 }
-#app .subcontainer1 .subcontainer2 {
-  width: 50px;
-  height: 50px;
-  background-color: #fcf9f9;
-  border: 2px solid green;
-}/*# sourceMappingURL=style.css.map */
+#app .main .posts__item::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #a8a8a8;
+}
+#app .main .posts__item:nth-child(even) {
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: -70px;
+}
+#app .main .posts__item:nth-child(even)::after {
+  left: -30px;
+  top: 30px;
+}
+#app .main .posts__item:nth-child(odd) {
+  margin-right: auto;
+  margin-left: 30px;
+}
+#app .main .posts__item:nth-child(odd)::after {
+  right: -30px;
+  top: 30px;
+}
+
+/**    .container1 {
+        float: left;
+        width: 390px;
+        height: 200px;
+        padding: 10px 0px 20px 15px;
+        margin-top: 100px;
+        border-left: 2px solid $bgGray;
+    }
+    .right h1{
+        font-size: 40px;
+        padding-bottom: 13px;
+    }
+    .container1 hr{
+        width: 90px;
+        border: 1px solid $primaryColor;
+    }
+
+    .right p{
+        padding-top: 12px;
+    }
+
+    .remaining_area {
+        display: block;
+        width: 100%;
+        height: 800px;
+        background-color: $bgGray;
+    }
+    .container2 .container3{
+
+
+    }
+    .container2{
+        float: left;
+        display:block;
+        width: 50%;
+        height: 100%;
+    }
+    .container3{
+        float:right;
+        display:block;
+        width: 50%;
+        height: 100%;
+        background-color:$bgGray;
+    }
+    .subcontainer3{
+
+        height: 300px;
+        //padding: 50px 0px 50px 0px;
+        margin: 250px 40px 100px 40px;
+        background-color:$secondaryColor;
+    }
+    .subcontainer1{
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color:blue;
+    }
+    .box1{
+        height: 100px;
+        margin:100px 20px 0px 20px;
+        background-color: $secondaryColor;
+    }
+    img{
+        height: 100px;
+        width: 100px;
+    }
+    .subcontainer2{
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color: palegoldenrod;
+
+    }
+}**//*# sourceMappingURL=style.css.map */
