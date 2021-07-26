@@ -1,5 +1,12 @@
 @import "./styles/color";
 
+%border-left--hovered{
+    border-left: 2px solid $primaryColor;;
+}
+%border-left{
+    border-left: 2px solid transparent;;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +15,7 @@
 
 body {
   background-color: $bgGray;
+  font-family: $font-family--raleway;
 }
 
 #app{
@@ -120,6 +128,12 @@ body {
                 min-height: 250px;
                 border-radius: 3px;
                 position: relative;
+                transition: 0.5s all;
+                @extend %border-left;
+                &:hover{
+                 @extend %border-left--hovered;
+                 box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+                }
                 .containt_area{
                     display: block;
                     height: 150px;
@@ -128,10 +142,7 @@ body {
                    // margin-left: 35px;
                    padding-left: 45px;
                    font-family: arial;
-                    border-left: 2px solid $primaryColor;
-                    h1{
-                        
-                    }
+                    // @extend %border-left
                 }
                 &::after{
                     content:'';
@@ -163,79 +174,3 @@ body {
         }
     }
 }
-    
-    
-    /**    .container1 {
-        float: left;
-        width: 390px;
-        height: 200px;
-        padding: 10px 0px 20px 15px;
-        margin-top: 100px;
-        border-left: 2px solid $bgGray;
-    }
-    .right h1 {
-      font-size: 40px;
-      padding-bottom: 13px;
-    }
-    .container1 hr {
-      width: 90px;
-      border: 1px solid $primaryColor;
-    }
-
-    .right p {
-      padding-top: 12px;
-    }
-
-    .remaining_area {
-        display: block;
-        width: 100%;
-        height: 800px;
-        background-color: $bgGray;
-    }
-    .container2 .container3{
-        
-
-    }
-    .container2{
-        float: left;
-        display:block;
-        width: 50%;
-        height: 100%;
-    }
-    .container3{
-        float:right;
-        display:block;
-        width: 50%;
-        height: 100%;
-        background-color:$bgGray;
-    }
-    .subcontainer3{
-
-        height: 300px;
-        //padding: 50px 0px 50px 0px;
-        margin: 250px 40px 100px 40px;
-        background-color:$secondaryColor;
-    }
-    .subcontainer1{
-        display: block;
-        width: 100%;
-        height: 50%;
-        background-color:blue;
-    }
-    .box1{
-        height: 100px;
-        margin:100px 20px 0px 20px;
-        background-color: $secondaryColor;
-    }
-    img{
-        height: 100px;
-        width: 100px;
-    }
-    .subcontainer2{
-        display: block;
-        width: 100%;
-        height: 50%;
-        background-color: palegoldenrod;
-
-    }
-}**/
