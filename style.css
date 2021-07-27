@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+#app .main .posts__item:hover {
+  border-left: 2px solid #f14e25;
+}
+
+#app .main .posts__item {
+  border-left: 2px solid transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +14,8 @@
 }
 
 body {
-  background-color: #b3a9a9;
+  background-color: #e1e1e1;
+  font-family: "Raleway", sans-serif;
 }
 
 #app.home {
@@ -18,96 +26,58 @@ body {
 }
 
 #app .sidebar {
+  display: block;
   position: relative;
-  width: 100%;
-  background-color: #f0f0f0;
-  border-right: 2px solid #b3a9a9;
+  width: 15%;
+  background-color: #fcf9f9;
+  border-right: 2px solid #e1e1e1;
 }
 
 #app .sidebar__heading {
-  display: block;
-  height: 200px;
-  background-color: #f54e4e;
+  position: relative;
+  height: 170px;
+  background-color: #f14e25;
   color: white;
+  font-family: Arial;
 }
 
 #app .sidebar__heading h1 {
-  padding: 50px 15px 20px 15px;
-  font-family: Arial;
-  font: size 25px;
+  position: relative;
+  padding: 20px 10px 10px 10px;
 }
 
 #app .sidebar__heading hr {
   width: 80%;
   display: block;
-  margin: 0px 20px;
+  margin: 20px 10px 20px 10px;
 }
 
-#app .sidebar__menu ul {
+#app .sidebar__menu__navigation {
   width: 100%;
   list-style-type: none;
 }
 
-#app li a {
+#app .sidebar__menu li a {
   display: block;
-  padding: 20px 5px 10px 10px;
-  color: black;
+  padding: 10px 20px;
+  color: #2c2c2c;
   text-decoration: none;
 }
 
-#app li a:hover {
-  background-color: #b3a9a9;
-  border-left: 3px solid #f54e4e;
+#app .sidebar__menu li a i {
+  font-size: 0px;
+}
+
+#app .sidebar__menu li a:hover {
+  background-color: #e1e1e1;
   font-weight: bolder;
+  border-left: 3px solid #f14e25;
 }
 
-#app .header {
-  height: 300px;
-  width: 600%;
-  background-color: #f0f0f0;
-  position: relative;
-}
-
-#app .left_heading {
-  float: left;
-  width: 20%;
-  height: 100%;
-}
-
-#app .right_heading h1 {
-  font-family: "Trirong", serif;
-  color: #2c2c2c;
-  font-size: 40px;
-  font-weight: lighter;
-  padding-bottom: 8px;
-}
-
-#app .right_heading hr {
-  width: 25%;
-  display: block;
-  border: 1px solid #f54e4e;
-}
-
-#app .right_heading p {
-  font-family: "Trirong", serif;
-  font-size: 15px;
-  padding-top: 20px;
-}
-
-#app .container1 {
-  width: 400px;
-  height: 150px;
-  float: left;
-  display: block;
-  padding-left: 20px;
-  padding-bottom: 10px;
-  margin-top: 50px;
-  border-left: 1px solid #b3a9a9;
-}
-
-#app .column1 {
-  width: 300px;
-  height: 300px;
+#app .sidebar__menu li a:hover i {
+  margin-left: 20px;
+  margin-top: 3px;
+  font-size: 20px;
 }
 
 #app .main {
@@ -117,6 +87,125 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   max-width: 100%;
-  background-color: #b3a9a9;
+}
+
+#app .main .top {
+  display: block;
+  height: 350px;
+  width: 100%;
+  background-color: #fcf9f9;
+}
+
+#app .main .top .left {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+#app .main .top .right {
+  display: block;
+  float: right;
+  width: 80%;
+  height: 100%;
+}
+
+#app .main .top .right .container1 {
+  float: left;
+  width: 390px;
+  height: 200px;
+  padding: 10px 0px 20px 15px;
+  margin-top: 100px;
+  border-left: 2px solid #e1e1e1;
+}
+
+#app .main .top .right .container1 .h1 {
+  font-size: 40px;
+  padding: 30px;
+}
+
+#app .main .top .right .container1 hr {
+  width: 90px;
+  border: 1px solid #f14e25;
+}
+
+#app .main .top .right .container1 .p {
+  margin-top: 12px;
+}
+
+#app .main .posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: relative;
+}
+
+#app .main .posts::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  width: 2px;
+  background-color: #a8a8a8;
+  height: calc(100% - 30px);
+  border-radius: 3px;
+  left: calc(50% - 1px);
+}
+
+#app .main .posts__item {
+  background-color: #ffffff;
+  width: calc(50% - 60px);
+  min-height: 250px;
+  border-radius: 3px;
+  position: relative;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+#app .main .posts__item:hover {
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#app .main .posts__item .containt_area {
+  display: block;
+  height: 150px;
+  width: 80%;
+  margin-top: 65px;
+  padding-left: 45px;
+  font-family: arial;
+}
+
+#app .main .posts__item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #a8a8a8;
+}
+
+#app .main .posts__item:nth-child(even) {
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: -70px;
+}
+
+#app .main .posts__item:nth-child(even)::after {
+  left: -30px;
+  top: 30px;
+}
+
+#app .main .posts__item:nth-child(odd) {
+  margin-right: auto;
+  margin-left: 30px;
+}
+
+#app .main .posts__item:nth-child(odd)::after {
+  right: -30px;
+  top: 30px;
 }
 /*# sourceMappingURL=style.css.map */

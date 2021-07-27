@@ -1,5 +1,11 @@
-@import './style/color';
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import "./style/color";
+//@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+%border-left--hovered{
+  border-left: 2px solid $primaryColor;
+}
+%border-left{
+  border-left: 2px solid transparent;
+}
 
 *{
     margin: 0;
@@ -9,6 +15,7 @@
 
 body{
     background-color:  $bgGray;
+    font-family: $font-family--raleway;
 }
 
 #app{
@@ -17,90 +24,158 @@ body{
         min-height: 100vh;
     }
     .sidebar{
-        position: relative;
-        width: 100%;
-        background-color:$bglightGray;
-        border-right: 2px solid $bgGray;
-    }
-    .sidebar__heading{
-        display: block;
-       height: 200px; 
-       background-color: $primaryColor;
-       color:white;
-    }
-    .sidebar__heading h1{
-       padding: 50px 15px 20px 15px;
-       font-family: Arial;
-       font: size 25px;
-    }
-    .sidebar__heading hr{
-        width: 80%;
-        display: block;
-        margin: 0px 20px;
-    }
-    .sidebar__menu ul{
-        width: 100%;
-        list-style-type:none;
-    }
-    li a{
       display: block;
-      padding: 20px 5px 10px 10px ; 
-      color: black;
-      text-decoration: none;
-    }
-     li a:hover{
-        background-color:$bgGray;
-        border-left: 3px solid $primaryColor;
-        font-weight: bolder;
-    }
-    .header{
-        height: 300px;
-        width: 600%;
-        background-color:$bglightGray;
+      position: relative;
+      width: 15%;
+      background-color: $secondaryColor;
+      border-right: 2px solid $bgGray;
+      &__heading{
         position: relative;
-    }
-    .left_heading{
-        float: left;
-        width: 20%;
-        height: 100%;
-        
-    }
-    .right_heading h1{
-        font-family: "Trirong", serif;
-        color: $darkTextColor;
-        font-size: 40px;
-        font-weight: lighter;
-        padding-bottom: 8px;
-        
-    }.right_heading hr{
-        width: 25%;
-        display: block;
-        border: 1px solid $primaryColor;
-    }
-    .right_heading p{   
-        font-family: "Trirong", serif;
-        font-size: 15px;
-        padding-top: 20px;
-
-    }
-    .container1{
-        width: 400px;
-        height: 150px;
-        float: left;
-        display: block;
-        padding-left: 20px;
-        padding-bottom: 10px;
-        margin-top: 50px;
-        border-left: 1px solid $bgGray;
-    }
-    .column1{
-        width: 300px;
-        height: 300px;
+        height: 170px;
+        background-color: $primaryColor;
+        color: $fontColor1;
+        font-family: Arial;
+        h1{
+          position: relative;
+          padding: 20px 10px 10px 10px;
+        }
+        hr{
+          width: 80%;
+          display: block;
+          margin: 20px 10px 20px 10px;
+        }
+      }
+      &__menu{
+        &__navigation{
+          width: 100%;
+          list-style-type: none;
+        }
+        li a{
+          display: block;
+          padding: 10px 20px;
+          color: $darkTextColor;
+          text-decoration: none;
+          i{
+            font-size: 0px;
+          }
+        }
+        li a:hover{
+          background-color: $bgGray;
+          font-weight: bolder;
+          border-left: 3px solid $primaryColor;
+          i{
+            margin-left: 20px;
+            margin-top: 3px;
+            font-size: 20px;
+          }
+        }
+      }
     }
     .main{
-        flex-basis: 0;
-        flex-grow: 1;
-        max-width: 100%;
-        background-color: $bgGray;
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+      .top{
+        display: block;
+        height: 350px;
+        width: 100%;
+        background-color:$secondaryColor;
+        .left{
+          float: left;
+          width: 20%;
+          height: 100%;
+        }
+        .right{
+          display: block;
+          float: right;
+          width: 80%;
+          height: 100%;
+          .container1{
+            float: left;
+            width: 390px;
+            height: 200px;
+            padding: 10px 0px 20px 15px;
+            margin-top: 100px;
+            border-left: 2px solid $bgGray;
+            .h1{
+              font-size: 40px;
+              padding: 30px;
+            }
+            hr{
+              width: 90px;
+              border: 1px solid $primaryColor;
+            }
+            .p{
+              margin-top: 12px;
+            }
+          }
+        }
+      }
+      //main Area remaining part will go from here
+      .posts{
+        display: flex;
+        flex-flow: column;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        position: relative;
+        &::after{
+          content: '';
+          position: absolute;
+          top: 30px;
+          width: 2px;
+          background-color: $borderGray;
+          height: calc(100% - 30px);
+          border-radius: 3px;
+          left: calc(50% - 1px);
+        }
+        &__item{
+          background-color: $lightBackground;
+          width: calc(50% - 60px);
+          min-height: 250px;
+          border-radius: 3px;
+          position: relative;
+          transition: 0.5s all;
+          @extend %border-left;
+          &:hover{
+          @extend %border-left--hovered;
+          box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+        }
+       .containt_area{
+         display: block;
+         height: 150px;
+         width: 80%;
+         margin-top: 65px;
+         //margin-left:35px;
+         padding-left: 45px;
+         font-family: arial;
+         //font-family: Arial, Helvetica, sans-serif;
+         //@extend %border-left
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 2px;
+          background-color: $borderGray;
+        }
+        &:nth-child(even){
+          margin-left: auto;
+          margin-right: 30px;
+          margin-top: -70px;
+          &::after{
+            left: -30px;
+            top: 30px;
+          }
+        }
+        &:nth-child(odd){
+          margin-right: auto;
+          margin-left: 30px;
+          &::after{
+            right: -30px;
+            top: 30px;
+          }
+        }
+      }
     }
+  }
 }
