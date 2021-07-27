@@ -55,11 +55,19 @@ body{
                padding: 10px 20px;
                color: $darkTextColor;
                text-decoration: none;
+               i{
+                   font-size: 0px;
+               }
             }
             li a:hover{
               background-color: $bgGray;
               font-weight: bolder;
               border-left: 3px solid $primaryColor;
+              i{
+                 margin-left: 20px;
+                 margin-top: 3px;
+                 font-size:20px ; 
+                }
             }
         }
     }
